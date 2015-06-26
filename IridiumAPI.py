@@ -1,5 +1,6 @@
 #Import Json Library
 import json
+import os
 #Open Api
 fApi = open("api.json","r")
 #Load Api
@@ -31,4 +32,5 @@ if not os.path.exists(workspace + "/" + Server['developer_repo']):
 #Close API Server
 fServer.close()
 
-print("Starting Iridium FTP Service And Shutting Down")
+print("Starting Iridium FTP Service")
+server = os.popen("sudo python -m SimpleHTTPServer")
